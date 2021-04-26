@@ -1,7 +1,7 @@
 import React, { PropsWithChildren, useCallback } from 'react';
 import { stitches } from '../../../../config/stitches.config';
 import RemoveIcon from '../../../../public/images/icon-remove.svg';
-import { ListStateActionCreators } from 'hooks/use-list-state';
+import { ListStateActionCreators } from '../../../../hooks/use-list-state';
 import { JobListComponentPropsWithDispatch } from 'types';
 
 export const StyledFilterTablet = stitches.styled('div', {
