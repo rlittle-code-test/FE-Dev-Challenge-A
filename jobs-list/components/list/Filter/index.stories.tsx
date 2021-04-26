@@ -14,5 +14,5 @@ export default {
 };
 export const primary = () => {
   const filters = ['React', 'CSS'];
-  return <Filter filterTags={filters} />;
+  return <Filter dispatch={() => {}} filterTags={filters} />;
 };
