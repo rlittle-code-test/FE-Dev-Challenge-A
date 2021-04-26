@@ -1,13 +1,13 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-  stories: ["../components/**/*.stories.mdx", "../components/**/*.stories.tsx"],
-  addons: ["@storybook/addon-essentials"],
+  stories: ['../components/**/*.stories.mdx', '../components/**/*.stories.tsx'],
+  addons: ['@storybook/addon-essentials'],
   reactOptions: {
     fastRefresh: true,
   },
   webpackFinal: async (baseConfig) => {
-    const nextConfig = require("../next.config.js");
+    const nextConfig = require('../next.config.js');
     const { module = {} } = baseConfig;
 
     const newConfig = {
@@ -18,17 +18,19 @@ module.exports = {
         rules: [...(module.rules || [])],
       },
     };
-
-    // TypeScript
+    const fileLoaderRule = newConfig.module.rules.find(
+      (rule) => rule.test && rule.test.test('.svg')
+    );
+    fileLoaderRule.exclude = /\.svg$/;
     newConfig.module.rules.push({
       test: /\.(ts|tsx)$/,
-      include: [path.resolve(__dirname, "../components")],
+      include: [path.resolve(__dirname, '../components')],
     });
     newConfig.module.rules.unshift({
       test: /\.svg$/,
-      use: ["@svgr/webpack"],
+      use: ['@svgr/webpack'],
     });
-    newConfig.resolve.extensions.push(".ts", ".tsx");
+    newConfig.resolve.extensions.push('.ts', '.tsx');
     return newConfig;
   },
 };
