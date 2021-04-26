@@ -1,7 +1,7 @@
 import React, { PropsWithChildren, useCallback } from 'react';
 import { stitches } from '../../../../config/stitches.config';
 // Hooks
-import { ListStateActionCreators } from 'hooks/use-list-state';
+import { ListStateActionCreators } from '../../../../hooks/use-list-state';
 // Types
 import { JobListComponentPropsWithDispatch } from 'types';
 

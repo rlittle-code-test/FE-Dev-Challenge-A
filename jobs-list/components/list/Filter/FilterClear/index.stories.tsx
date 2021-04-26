@@ -13,5 +13,5 @@ export default {
   },
 };
 export const primary = () => {
-  return <FilterClear></FilterClear>;
+  return <FilterClear dispatch={() => {}}></FilterClear>;
 };
