@@ -8,12 +8,16 @@ export type JobListReducerAction = {
   data?: any;
 };
 
+/** Apply actions to app state based on action type */
 function reducer(state: JobListState, action: JobListReducerAction) {
   const act = Actions[action.type];
   const update = act(state, action.data);
   return { ...state, ...update };
 }
 
+/**
+ * Reducer hook for list of posts and filter state
+ */
 export function useListState(): [
   JobListState,
   React.Dispatch<JobListReducerAction>
