@@ -1,3 +1,4 @@
+
 # Pathwire - Frontend Dev Challenge A
 
 This is a solution to the Pathwire Frontend Dev Challenge A
@@ -26,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![screenshot](https://user-images.githubusercontent.com/82979783/116315488-9ad06a80-a77e-11eb-9b1c-ffec3f950223.png)
 
 ### Links
 
