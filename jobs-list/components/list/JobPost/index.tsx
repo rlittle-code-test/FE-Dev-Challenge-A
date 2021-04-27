@@ -4,7 +4,7 @@ import { stitches } from '../../../config/stitches.config';
 import Logo from '../Logo';
 import JobDescription, { JobDescriptionProps } from '../JobDescription';
 import Tablet from '../Tablet';
-import { ListStateActionCreators } from 'hooks/use-list-state';
+import { ListStateActionCreators } from '../../../hooks/use-list-state';
 import { JobListComponentPropsWithDispatch } from 'types';
 
 export const StyledJobPost = stitches.styled('section', {
