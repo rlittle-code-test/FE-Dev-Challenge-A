@@ -1,7 +1,7 @@
 import React from 'react';
 import JobPost from '.';
 import LoopStudios from '../../../public/images/loop-studios.svg';
-import { JobPostProps } from '.';
+
 export default {
   title: 'Components/List/JobPost',
   component: JobPost,
@@ -14,17 +14,17 @@ export default {
   },
 };
 
-const Template = (args) => <JobPost {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-  company: 'Loop Studios',
-  languages: ['JavaScript'],
-  location: 'Remote',
-  logo: LoopStudios,
-  new: true,
-  position: 'Junior Frontend Developer',
-  postedAt: '1d ago',
-  role: 'Full Time',
-  tools: ['React', 'Sass', 'Fullstack', 'Midweight'],
-};
+export const Primary = () => (
+  <JobPost
+    company={'Loop Studios'}
+    dispatch={() => {}}
+    languages={['JavaScript']}
+    location={'Remote'}
+    logo={LoopStudios}
+    new
+    position={'Junior Frontend Developer'}
+    postedAt={'1d ago'}
+    role={'Full Time'}
+    tools={['React', 'Sass', 'Fullstack', 'Midweight']}
+  />
+);
