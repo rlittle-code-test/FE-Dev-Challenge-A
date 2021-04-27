@@ -20,6 +20,10 @@ export type TabletProps = {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
+/**
+ * Rectangular tablet
+ * @param {TabletProps} props
+ */
 export function Tablet(props: React.PropsWithChildren<TabletProps>) {
   return <StyledTablet onClick={props.onClick}>{props.children}</StyledTablet>;
 }

@@ -30,6 +30,10 @@ export type TagProps = {
   variant?: 'cyan' | 'gray';
 };
 
+/**
+ * Capsule shaped tag
+ * @param {TagProps} props
+ */
 export function Tag(props: PropsWithChildren<TagProps>) {
   return <StyledTag variant={props.variant}>{props.children}</StyledTag>;
 }

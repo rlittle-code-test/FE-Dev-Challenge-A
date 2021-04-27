@@ -20,6 +20,10 @@ export type JobDescriptionProps = {
   position: string;
 } & JobDetailsProps;
 
+/**
+ * Wraps up job company, tags, title and details
+ * @param {JobDescriptionProps} props
+ */
 export function JobDescription(props: PropsWithChildren<JobDescriptionProps>) {
   return (
     <StyledJobDescription>
