@@ -92,6 +92,10 @@ export type JobPostProps = JobDescriptionProps &
     tools: string[];
   };
 
+/**
+ * Wraps up company logo, description, and tablets onto a card
+ * @param {JobPostProps} props
+ */
 export function JobPost(props: PropsWithChildren<JobPostProps>) {
   const tabletOnClick = (filter: string) =>
     useCallback(

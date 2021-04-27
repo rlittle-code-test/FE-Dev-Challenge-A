@@ -26,6 +26,10 @@ export type JobDetailsProps = {
   role: string;
 };
 
+/**
+ * Basic details on location, posting date and role type
+ * @param {JobDetailsProps} props
+ */
 export function JobDetails(props: PropsWithChildren<JobDetailsProps>) {
   return (
     <StyledJobDetails>

@@ -42,6 +42,10 @@ export type FilterProps = JobListComponentPropsWithDispatch & {
   filterTags: string[];
 };
 
+/**
+ * Wrap up selected filters and filter clear button
+ * @param {FilterProps} props
+ */
 export function Filter(props: PropsWithChildren<FilterProps>) {
   return (
     <>
