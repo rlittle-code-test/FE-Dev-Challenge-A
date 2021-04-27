@@ -3,16 +3,16 @@ import { stitches } from '../config/stitches.config';
 // Assets
 import Header from '../public/images/bg-header-desktop.svg';
 // Components
-import Filter from 'components/list/Filter';
-import JobPost from 'components/list/JobPost';
+import Filter from '../components/list/Filter';
+import JobPost from '../components/list/JobPost';
 // Hooks
 import useLoadData from '../hooks/use-load-data';
 import useListState, {
   JobListState,
   ListStateActionCreators,
-} from 'hooks/use-list-state';
+} from '../hooks/use-list-state';
 // Types
-import { JobPosting } from 'types';
+import { JobPosting } from '../types';
 
 function filterPostsFn(state: JobListState) {
   return state.filters.length > 0
