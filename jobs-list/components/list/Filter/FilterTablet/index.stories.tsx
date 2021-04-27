@@ -13,5 +13,5 @@ export default {
   },
 };
 export const primary = () => {
-  return <FilterTablet filterText={'Frontend'} />;
+  return <FilterTablet filterText={'Frontend'} dispatch={() => {}} />;
 };
